@@ -157,8 +157,40 @@ body.dark .skills li:hover {
   margin-bottom: 10px;
 }
 
+/* Tooltips */
 .skill span {
   font-size: 0.9rem;
+  psition: relative;
+  cursor: help;
+}
+
+.skill span::after{
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 6px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.skill span:hover::after,
+.skill span:focus::after {
+  opacity: 1;
+}
+
+/* Dark Mode */
+body.dark .skill span::after {
+  background: #eee;
+  color: #121212;
 }
 
 .bar {
@@ -196,4 +228,20 @@ body.dark .fill {
 .animate.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .skill {
+    margin-bottom: 14px;
+  }
+
+  .skill span {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .bar {
+    height: 10px;
+  }
 }
