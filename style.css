@@ -139,3 +139,61 @@ body.dark .skills li:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* Skill Groups */
+.skill-group {
+  margin-bottom: 25px;
+}
+
+.skill-group h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* Skill Bars */
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill span {
+  font-size: 0.9rem;
+}
+
+.bar {
+  background: #ddd;
+  border-radius: 4px;
+  height: 8px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  background: #333;
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+/* Dark Mode */
+body.dark .bar {
+  background: #444;
+}
+
+body.dark .fill {
+  background: #eee;
+}
+
+/* Scroll Animation */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
