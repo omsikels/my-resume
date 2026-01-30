@@ -63,6 +63,17 @@ h2 {
   margin: 5px;
   border-radius: 4px;
   font-size: 0.9rem;
+  border: 1px solid transparent;
+}
+
+.skills li:active {
+  transform: scale(0.97);
+}
+
+.skills li:hover {
+  background: #fff;
+  color: #333;
+  border-color: #555;
 }
 
 .item span {
@@ -92,6 +103,10 @@ body.dark button {
   color: #121212;
 }
 
+body.dark .skills li:hover {
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+}
+
 @media (max-width: 600px) {
   body {
     padding: 10px;
@@ -108,4 +123,19 @@ body.dark button {
   section {
     margin-bottom: 20px;
   }
+}
+
+.skills li {
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
