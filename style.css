@@ -91,3 +91,21 @@ body.dark button {
   background: #eee;
   color: #121212;
 }
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  section {
+    margin-bottom: 20px;
+  }
+}
