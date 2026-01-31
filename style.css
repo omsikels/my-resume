@@ -245,3 +245,31 @@ body.dark .fill {
     height: 10px;
   }
 }
+
+/* ASCII GIF */
+#ascii-gif {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#ascii-gif h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ascii-gif {
+  width: 100px; /* adjust to align with the gif */
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
