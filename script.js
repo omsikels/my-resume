@@ -27,3 +27,28 @@ const observer = new IntersectionObserver(
 );
 
 animatedElements.forEach((el) => observer.observe(el));
+
+//ASCII Gif Logic
+
+const asciiGifSection = document.getElementByID("ascii-gif");
+const gif = asciiGifSection.querySelector(".ascii-gif");
+const gifContainer = asciiGifSection.querySelectir(".gif-container");
+
+//Intersection OBserver to trigger visibility of the ASCII GIF
+const gifObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Show the GIF when the section is in view
+        gif.style.display = "block";
+      } else {
+        // Hide the GIF when it's out of view
+        gif.style.display = "none";
+      }
+    });
+  },
+  { threshold: 0.3 }  // 30% visibility before triggering
+);
+
+// Observe the ASCII GIF section
+gifObserver.observe(asciiGifSection);
